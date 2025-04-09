@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-	carService := car.NewCarService()
+	carService := car.Construct()
 
-	newCar, err := carService.CreateCar(car.Car{
+	newCar, err := carService.NewCarBySpec(car.Car{
 		Name:        "Tesla",
 		Color:       "red",
 		EngineType:  "Electric",
